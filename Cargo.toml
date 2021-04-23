@@ -1,0 +1,17 @@
+[package]
+name = "glass"
+version = "0.1.0"
+authors = ["Andrew Dawson <dawso.andrew@gmail.com>"]
+edition = "2018"
+license = "CC0-1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gfx-hal = "0.7.0"
+image = "0.23.12"
+log = "0.4"
+winit = "0.24.0"
+
+[target.'cfg(windows)'.dependencies]
+backend = { version = "0.7", package = "gfx-backend-dx12" }
