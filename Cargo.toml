@@ -7,11 +7,21 @@ license = "CC0-1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[build-dependencies]
+anyhow = "1.0"
+fs_extra = "1.1"
+futures = "0.3"
+glob = "0.3"
+shaderc = "0.7"
+tokio = { version = "1.5.0", features = ["full"] }
+
 [dependencies]
+env_logger = "0.8.3"
+gfx-auxil = "0.8.0"
 gfx-hal = "0.7.0"
 image = "0.23.12"
-log = "0.4"
+log = "0.4.0"
 winit = "0.24.0"
 
 [target.'cfg(windows)'.dependencies]
-backend = { version = "0.7", package = "gfx-backend-dx12" }
+backend = { version = "0.7.1", package = "gfx-backend-dx12" }
